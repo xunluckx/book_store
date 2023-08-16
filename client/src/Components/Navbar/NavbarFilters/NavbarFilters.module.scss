@@ -1,0 +1,39 @@
+.filtersWrapper {
+  .filtersTitle {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 20px;
+    background-color: rgb(229, 151, 64);
+    padding: 10px 10px;
+  }
+  .priceWrapper {
+    .priceTitle {
+      margin: 10px 0;
+    }
+
+    .priceFilter {
+      display: flex;
+
+      .priceInputFrom {
+        padding: 0 5px;
+        width: 100px;
+      }
+
+      .priceInputUpTo {
+        padding: 0 5px;
+        width: 100px;
+        margin: 0 15px;
+      }
+
+      .priceSearchButton {
+        padding: 5px;
+        background-color: rgb(229, 151, 64);
+      }
+
+      .priceSearchImage {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}

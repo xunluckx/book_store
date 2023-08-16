@@ -1,0 +1,46 @@
+ul {
+  margin: 0 0 10px 0;
+  padding: 0 10px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.navbarWrapper {
+  .nav {
+    background-color: #fff;
+
+    .navTitle {
+      color: #fff;
+      font-size: 20px;
+      background-color: rgb(229, 151, 64);
+      padding: 10px 10px;
+    }
+
+    .collapseButton {
+      font-size: 20px;
+      color: #000;
+      background-color: #fff;
+      .collapseButtonOpen {
+        padding: 5px;
+        width: 20px;
+        height: 20px;
+      }
+      .collapseButtonClose {
+        padding: 5px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .item {
+      color: #000;
+      padding-left: 10px;
+    }
+
+    .active {
+      color: rgb(229, 151, 64);
+    }
+  }
+}

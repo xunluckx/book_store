@@ -1,0 +1,48 @@
+.navbarWrapper {
+  grid-area: navbar;
+
+  .navSearch {
+    margin: 30px 0;
+    display: flex;
+
+    .navSearchInput {
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.5;
+      background-color: #fff;
+      border: none;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      border-radius: 0.25rem;
+    }
+
+    .navSearchImage {
+      width: 20px;
+      height: 20px;
+    }
+
+    .navSearchButton {
+      background-color: #fff;
+    }
+  }
+
+  .nav {
+    background-color: #fff;
+    max-width: 25%;
+
+    .navTitle {
+      color: #fff;
+      font-size: 20px;
+      background-color: rgb(229, 151, 64);
+      padding: 10px 10px;
+    }
+
+    .item {
+      color: #000;
+    }
+
+    .active {
+      color: #ff0000;
+    }
+  }
+}

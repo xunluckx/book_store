@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  .navItem {
+    margin-left: 50px;
+    &:hover {
+      border-bottom: 3px solid;
+      padding-bottom: 5px;
+      transition: 0.1s ease-in-out;
+    }
+    .active {
+      border-bottom: 3px solid;
+      padding-bottom: 5px;
+    }
+  }
+}

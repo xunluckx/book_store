@@ -1,0 +1,25 @@
+.headerInfoWrapper {
+  background-color: rgb(229, 151, 64);
+  padding: 20px 0;
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .streetName {
+      color: #fff;
+      background-color: rgba(167, 167, 167, 0.555);
+      padding: 5px 10px;
+    }
+
+    .phoneNumber {
+      color: #fff;
+      background-color: rgba(167, 167, 167, 0.555);
+      padding: 5px 10px;
+    }
+  }
+}

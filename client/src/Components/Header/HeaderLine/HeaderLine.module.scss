@@ -1,0 +1,56 @@
+button {
+  color: white;
+  background-color: #1f1f1f;
+  border: none;
+  cursor: pointer;
+}
+
+.headerLineWrapper {
+  background-color: #222;
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+
+    .leftSide {
+      .langRu {
+        border-right: 1px solid;
+        &:hover {
+          background-color: rgb(104, 104, 104);
+          transition: 0.2s;
+        }
+      }
+      .langUa {
+        &:hover {
+          background-color: rgb(104, 104, 104);
+          transition: 0.2s;
+        }
+      }
+    }
+
+    .rightSide {
+      display: flex;
+      align-items: center;
+    }
+
+    .reviews {
+      padding: 5px 25px;
+      &:hover {
+        background-color: rgb(104, 104, 104);
+        transition: 0.2s;
+      }
+    }
+
+    .cart {
+      padding: 5px 25px;
+      &:hover {
+        background-color: rgb(104, 104, 104);
+        transition: 0.2s;
+      }
+    }
+  }
+}
