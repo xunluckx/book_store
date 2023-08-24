@@ -46,14 +46,16 @@ class BookController {
       books = await Book.findAndCountAll({ limit, offset });
     }
     if (genreId && !typeId) {
-      books = await Book.findAndCountAll({ where: { genreId, limit, offset } });
+      books = await Book.findAndCountAll({ where: { genreId }, limit, offset });
     }
     if (!genreId && typeId) {
-      books = await Book.findAndCountAll({ where: { typeId, limit, offset } });
+      books = await Book.findAndCountAll({ where: { typeId }, limit, offset });
     }
     if (genreId && typeId) {
       books = await Book.findAndCountAll({
-        where: { genreId, typeId, limit, offset },
+        where: { genreId, typeId },
+        limit,
+        offset,
       });
     }
     return res.json(books);

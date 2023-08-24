@@ -1,0 +1,61 @@
+.bookItem {
+  border: none;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  margin: 5px;
+
+  .bookImage {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+  }
+
+  .bookContent {
+    padding: 0 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+    .bookName {
+      cursor: pointer;
+      &:hover {
+        transition: 0.2s;
+        color: rgb(64, 116, 229);
+      }
+    }
+
+    .bookIsAvaible {
+      color: rgb(0, 201, 0);
+    }
+
+    .bookNotAvaible {
+      color: red;
+    }
+  }
+
+  .bookButtonWrapper {
+    min-height: 10px;
+    max-height: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .bookBuyButton {
+      padding: 7px;
+
+      color: #000;
+      background-color: #fff;
+      &:hover {
+        transition: 0.2s;
+        color: white;
+        background-color: rgb(64, 116, 229);
+      }
+    }
+  }
+
+  .bookNameWrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

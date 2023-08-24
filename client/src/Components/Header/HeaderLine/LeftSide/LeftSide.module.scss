@@ -1,0 +1,17 @@
+.leftSide {
+  .langRu {
+    background-color: #222;
+    border-right: 1px solid;
+    &:hover {
+      background-color: rgb(104, 104, 104);
+      transition: 0.2s;
+    }
+  }
+  .langUa {
+    background-color: #222;
+    &:hover {
+      background-color: rgb(104, 104, 104);
+      transition: 0.2s;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.collapseButton {
+  color: #000;
+  background-color: #fff;
+  .collapseButtonOpen {
+    width: 20px;
+    height: 20px;
+  }
+  .collapseButtonClose {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.active {
+  color: rgb(194, 194, 29);
+}

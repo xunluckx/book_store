@@ -1,0 +1,71 @@
+.bookPageWrapper {
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+
+  .bookTitle {
+    padding: 10px;
+    font-size: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidesWrapper {
+    margin: 10px;
+    display: flex;
+    .leftSide {
+      width: 50%;
+      .bookImageWrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .bookImage {
+        width: 300px;
+        height: 400px;
+      }
+    }
+
+    .rigthSide {
+      .bookIsAvaible {
+        margin-bottom: 20px;
+        font-size: 12px;
+        color: rgb(0, 201, 0);
+      }
+
+      .bookNotAvaible {
+        font-size: 12px;
+        color: red;
+      }
+
+      .bookPrice {
+        margin: 20px 0;
+        font-size: 20px;
+      }
+
+      .bookBuyButton {
+        padding: 10px;
+        color: #000;
+        border: 1px solid rgb(64, 116, 229);
+        &:hover {
+          transition: 0.2s;
+          color: #fff;
+          background-color: rgb(64, 116, 229);
+        }
+      }
+
+      .phoneNumber {
+        margin: 20px 0;
+        opacity: 0.8;
+      }
+
+      .info {
+        display: flex;
+        font-size: 10px;
+        margin-bottom: 20px;
+      }
+
+      .returnСonditionsInfo {
+        font-size: 12px;
+      }
+    }
+  }
+}

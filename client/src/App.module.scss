@@ -4,6 +4,8 @@ a {
 }
 
 .appWrapper {
+  background-color: #e6e6e6;
+
   .appWrapperContent {
     max-width: 1280px;
     margin: 0 auto;
@@ -12,12 +14,5 @@ a {
       'header header'
       'navbar content';
     grid-template-columns: 2fr 10fr;
-  }
-
-  background-color: #e6e6e6;
-  .contentWrapper {
-    grid-area: content;
-    display: flex;
-    justify-content: center;
   }
 }
