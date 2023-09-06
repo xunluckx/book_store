@@ -2,12 +2,14 @@ import { useContext } from 'react';
 import styles from './RigthSide.module.scss';
 import { Context } from '../../../..';
 import { observer } from 'mobx-react-lite';
-import { ADMIN_ROUTE, LOGIN_ROUTE } from '../../../../utils/consts';
+import { ADMIN_ROUTE, CART_ROUTE, LOGIN_ROUTE } from '../../../../utils/consts';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const RigthSide = observer(() => {
   const { user } = useContext(Context);
   const navigate = useNavigate();
+  const { i18n } = useTranslation();
 
   const logOut = () => {
     user.setUser({});
@@ -17,7 +19,7 @@ const RigthSide = observer(() => {
   return (
     <div className={styles.rightSide}>
       <button href="#" className={styles.reviews}>
-        Отзывы
+        {i18n.t('headerLine.reviews')}
       </button>
       {user.isAuth ? (
         <div>
@@ -25,13 +27,13 @@ const RigthSide = observer(() => {
             className={styles.admin}
             onClick={() => navigate(ADMIN_ROUTE)}
           >
-            Админ Панель
+            {i18n.t('headerLine.admin')}
           </button>
-          <button href="#" className={styles.cart}>
-            Корзина
+          <button onClick={() => navigate(CART_ROUTE)} className={styles.cart}>
+            {i18n.t('headerLine.cart')}
           </button>
           <button className={styles.auth} onClick={() => logOut()}>
-            Выйти
+            {i18n.t('headerLine.auth.exit')}
           </button>
         </div>
       ) : (
@@ -41,7 +43,7 @@ const RigthSide = observer(() => {
             navigate(LOGIN_ROUTE);
           }}
         >
-          Авторизация
+          {i18n.t('headerLine.auth.login')}
         </button>
       )}
     </div>

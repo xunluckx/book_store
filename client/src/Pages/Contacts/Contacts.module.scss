@@ -1,3 +1,30 @@
-.headerWrapper {
-  padding: 0 25px;
+.contactsTitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+.contactsContainer {
+  background-color: #fff;
+  margin: 30px 0;
+  .contactsContent {
+    padding: 10px;
+    max-width: 500px;
+    min-width: 500px;
+
+    .adressContent,
+    .phoneContent,
+    .emailContent,
+    .siteContent,
+    .companySiteContent,
+    .secondPhoneContent,
+    .nameContent {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.adressTitle {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
 }

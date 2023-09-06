@@ -3,9 +3,11 @@ import styles from './NavbarMenu.module.scss';
 import { observer } from 'mobx-react-lite';
 import TypesMenu from './TypesMenu/TypesMenu';
 import GenresMenu from './GenresMenu/GenresMenu';
+import { useTranslation } from 'react-i18next';
 
 const NavbarMenu = observer(() => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const { i18n } = useTranslation();
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
@@ -38,14 +40,14 @@ const NavbarMenu = observer(() => {
         <div className={styles.navContentWrapper}>
           {isCollapsed ? (
             <div>
-              <div>Типы</div>
+              <div>{i18n.t('navbar.types')}</div>
               <TypesMenu />
             </div>
           ) : null}
 
           {isCollapsed ? (
             <div>
-              <div>Жанры</div>
+              <div>{i18n.t('navbar.genres')}</div>
               <GenresMenu />
             </div>
           ) : null}

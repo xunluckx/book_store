@@ -1,9 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import styles from './Header.module.scss';
 import HeaderInfo from './HeaderInfo/HeaderInfo';
 import HeaderLine from './HeaderLine/HeaderLine';
 import HeaderNavbar from './HeaderNavbar/HeaderNavbar';
 
 const Header = () => {
+  const { i18n } = useTranslation();
   return (
     <div className={styles.headerWrapper}>
       <HeaderLine />
@@ -17,7 +19,7 @@ const Header = () => {
                 alt="logo"
               />
             </div>
-            <div className={styles.headerTitle}>Книжная база</div>
+            <div className={styles.headerTitle}>{i18n.t('header.title')}</div>
           </div>
           <HeaderNavbar />
         </div>

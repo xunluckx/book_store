@@ -1,18 +1,21 @@
+import { useTranslation } from 'react-i18next';
 import styles from './PriceFilter.module.scss';
 
 const PriceFilter = () => {
+  const { i18n } = useTranslation();
+
   return (
     <div>
       <div className={styles.priceWrapper}>
-        <div className={styles.priceTitle}>Цена</div>
+        <div className={styles.priceTitle}>{i18n.t('navbar.priceTitle')}</div>
         <div className={styles.priceFilter}>
           <input
-            placeholder="От 30 грн"
+            placeholder={i18n.t('navbar.priceHolder.from')}
             className={styles.priceInputFrom}
             type="number"
           />
           <input
-            placeholder="До 1000 грн"
+            placeholder={i18n.t('navbar.priceHolder.To')}
             className={styles.priceInputUpTo}
             type="number"
           />

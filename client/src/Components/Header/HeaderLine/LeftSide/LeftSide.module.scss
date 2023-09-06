@@ -1,4 +1,22 @@
 .leftSide {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .currencyWrapper {
+    .currencyContent {
+      background-color: #222;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+
+      &:hover {
+        background-color: rgb(104, 104, 104);
+        transition: 0.2s;
+      }
+    }
+  }
+
   .langRu {
     background-color: #222;
     border-right: 1px solid;

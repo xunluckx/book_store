@@ -1,23 +1,38 @@
+import React, { useState } from 'react';
+import Description from './Description/Description';
+import Characteristics from './Сharacteristics/Characteristics';
+import OrderInfo from './OrderInfo/OrderInfo';
 import styles from './SubInfo.module.scss';
 import { observer } from 'mobx-react-lite';
 
 const SubInfo = observer(() => {
-  const book = {
-    id: 1,
-    name: 'Азбука',
-    price: 100,
-    avaible: 1,
-    img: 'https://illustrators.ru/uploads/illustration/image/431745/main_431745_original.jpg',
-    typeId: 1,
-    genreId: 3,
+  const [activeTab, setActiveTab] = useState('description');
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'description':
+        return <Description />;
+      case 'characteristics':
+        return <Characteristics />;
+      case 'orderInfo':
+        return <OrderInfo />;
+      default:
+        return null;
+    }
   };
+
   return (
     <div className={styles.subInfoWrapper}>
       <div className={styles.subInfoButtons}>
-        <button>Описание</button>
-        <button>Характеристики</button>
-        <button>Информация для заказа</button>
+        <button onClick={() => setActiveTab('description')}>Описание</button>
+        <button onClick={() => setActiveTab('characteristics')}>
+          Характеристики
+        </button>
+        <button onClick={() => setActiveTab('orderInfo')}>
+          Информация для заказа
+        </button>
       </div>
+      <div className={styles.subInfoContent}>{renderContent()}</div>
     </div>
   );
 });

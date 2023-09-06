@@ -1,16 +1,22 @@
 import Admin from './Pages/AdminPage/Admin';
 import Auth from './Pages/Auth/Auth';
-import Basket from './Pages/Basket/Baset';
+import CART from './Pages/Cart/Cart';
 import BookPage from './Pages/BookPage/BookPage';
 import BooksList from './Pages/BooksList/BooksList';
 import {
   ADMIN_ROUTE,
-  BASKET_ROUTE,
+  CART_ROUTE,
   BOOK_ROUTE,
   LOGIN_ROUTE,
   REGISTRATION_ROUTE,
   SHOP_ROUTE,
+  ABOUT_US_ROUTE,
+  CONTACTS_ROUTE,
+  REFUNDS_ROUTE,
 } from './utils/consts';
+import AboutUs from './Pages/AboutUs/AboutUs';
+import Contacts from './Pages/Contacts/Contacts';
+import Refunds from './Pages/Refunds/Refunds';
 
 export const authRoutes = [
   {
@@ -19,8 +25,8 @@ export const authRoutes = [
   },
 
   {
-    path: BASKET_ROUTE,
-    Component: Basket,
+    path: CART_ROUTE,
+    Component: CART,
   },
 ];
 
@@ -43,5 +49,20 @@ export const publicRoutes = [
   {
     path: BOOK_ROUTE + '/:id',
     Component: BookPage,
+  },
+
+  {
+    path: ABOUT_US_ROUTE,
+    Component: AboutUs,
+  },
+
+  {
+    path: CONTACTS_ROUTE,
+    Component: Contacts,
+  },
+
+  {
+    path: REFUNDS_ROUTE,
+    Component: Refunds,
   },
 ];

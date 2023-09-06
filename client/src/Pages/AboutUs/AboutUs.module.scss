@@ -1,3 +1,66 @@
-.headerWrapper {
-  padding: 0 25px;
+.AboutUsWrapper {
+  .AboutUsTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .aboutUsInfoWrapper {
+    .descriptionWrapper {
+      .descriptionTitle {
+        font-weight: 600;
+      }
+      .descriptionText {
+        font-size: 14px;
+        margin: 10px 0;
+      }
+    }
+
+    .infoWrapper {
+      font-weight: 600;
+      .priceInfoWrapper {
+        margin: 10px 0;
+      }
+      .scheduleInfoWrapper {
+        margin: 10px 0;
+      }
+      .deliveryInfoWrapper {
+        margin: 10px 0;
+      }
+    }
+    .companyInfoWrapper {
+      .companyTitle {
+        font-size: 17px;
+        font-weight: 600;
+        margin: 20px 0;
+      }
+      .companyNameInfo {
+        display: flex;
+        justify-content: space-between;
+        min-width: 500px;
+        max-width: 500px;
+        .companyNameTitle {
+          font-weight: 600;
+        }
+      }
+      .companyTypeInfo {
+        display: flex;
+        justify-content: space-between;
+        min-width: 500px;
+        max-width: 500px;
+        .companyTypeTitle {
+          font-weight: 600;
+        }
+      }
+      .companyBrandsInfo {
+        display: flex;
+        justify-content: space-between;
+        min-width: 500px;
+        max-width: 500px;
+        .companyBrandsTitle {
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }

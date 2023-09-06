@@ -8,11 +8,11 @@ const User = sequelize.define('user', {
   role: { type: DataTypes.STRING, defaultValue: 'USER' },
 });
 
-const Basket = sequelize.define('basket', {
+const Cart = sequelize.define('cart', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 });
 
-const BasketBook = sequelize.define('basket_book', {
+const CartBook = sequelize.define('cart_book', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 });
 
@@ -49,14 +49,14 @@ const TypeGenre = sequelize.define('type_genre', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 });
 
-User.hasOne(Basket);
-Basket.belongsTo(User);
+User.hasOne(Cart);
+Cart.belongsTo(User);
 
 User.hasMany(Rating);
 Rating.belongsTo(User);
 
-Basket.hasMany(BasketBook);
-BasketBook.belongsTo(Basket);
+Cart.hasMany(CartBook);
+CartBook.belongsTo(Cart);
 
 Type.hasMany(Book);
 Book.belongsTo(Type);
@@ -67,8 +67,8 @@ Book.belongsTo(Genre);
 Book.hasMany(Rating);
 Rating.belongsTo(Book);
 
-Book.hasMany(BasketBook);
-BasketBook.belongsTo(Book);
+Book.hasMany(CartBook);
+CartBook.belongsTo(Book);
 
 Book.hasMany(BookInfo, { as: 'info' });
 BookInfo.belongsTo(Book);
@@ -78,8 +78,8 @@ Genre.belongsToMany(Type, { through: TypeGenre });
 
 module.exports = {
   User,
-  Basket,
-  BasketBook,
+  Cart,
+  CartBook,
   Book,
   BookInfo,
   Type,
